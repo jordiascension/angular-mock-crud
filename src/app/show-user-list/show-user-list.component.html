@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="card col-12 col-sm-4 col-md-3" *ngFor="let user of users;">
+        <div class="card-body">
+            <h5 class="card-title">{{user.name}} {{user.surname}}</h5>
+            <p class="card-text">DNI: {{user.dni}}</p>
+            <a [routerLink]="['/crud/update/', user.id]" class="btn btn-outline-primary">Update</a>
+            <a (click)="delete(user.id)" class="btn btn-outline-danger">Remove</a>
+        </div>
+    </div>
+</div>
